@@ -3,7 +3,8 @@ package formulas
 import "math"
 
 // Haversine accepts a latitude and longitude pairs as float64s
-// and returns the distance between them in km.
+// and returns the distance between them in radians.
+// Multiply the result by the radius of the earth.
 func Haversine(lat1, long1, lat2, long2 float64) float64 {
 	dLat := ToRadians(lat2 - lat1)
 	dLong := ToRadians(long2 - long1)
@@ -15,8 +16,5 @@ func Haversine(lat1, long1, lat2, long2 float64) float64 {
 		math.Pow(math.Sin(dLong/2.0), 2.0)*
 			math.Cos(rLat1)*math.Cos(rlat2)
 
-	radius := 6371000.0
-
-	c := 2.0 * math.Asin(math.Sqrt(a))
-	return radius * c
+	return 2.0 * math.Asin(math.Sqrt(a))
 }
