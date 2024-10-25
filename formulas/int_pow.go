@@ -1,21 +1,21 @@
 package formulas
 
-import "errors"
-
-func IntPow(base, exponent int) (int, error) {
+// IntPow does the math.Pow() thing but only accepts integers and return an integer
+// 0 is returned instead of an error.  Treat 0 as an error.
+func IntPow(base, exponent int) int {
 	if exponent < 0 {
-		return 0, errors.New("only positive exponents are allowed")
+		return 0
 	}
 	if exponent == 0 {
-		return 1, nil
+		return 1
 	}
 	if exponent == 1 {
-		return base, nil
+		return base
 	}
 
 	val := base
 	for i := 2; i <= exponent; i++ {
 		val *= base
 	}
-	return val, nil
+	return val
 }
