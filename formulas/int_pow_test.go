@@ -3,7 +3,7 @@ package formulas
 import "testing"
 
 func TestIntPow(t *testing.T) {
-	expected := 1
+	var expected int64 = 1
 	got := IntPow(2, 0)
 
 	if got != expected {
