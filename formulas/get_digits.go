@@ -1,10 +1,13 @@
 package formulas
 
-import "strconv"
-
-func GetDigits(num int) int {
+func GetDigits(num int64) int64 {
 	if num < 0 {
 		num *= -1
 	}
-	return len(strconv.Itoa(num))
+	var digits int64 = 0
+	for ok := true; ok; ok = (num > 0) {
+		num /= 10
+		digits++
+	}
+	return digits
 }

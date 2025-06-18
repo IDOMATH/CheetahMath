@@ -3,7 +3,7 @@ package formulas
 import "testing"
 
 func TestGetDigits(t *testing.T) {
-	expected := 1
+	var expected int64 = 1
 	got := GetDigits(3)
 	if expected != got {
 		t.Error("Expected : ", expected, " but got: ", got)
