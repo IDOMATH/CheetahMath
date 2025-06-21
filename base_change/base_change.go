@@ -1,10 +1,14 @@
 package base_change
 
-import "github.com/IDOMATH/CheetahMath/formulas"
+import (
+	"github.com/IDOMATH/CheetahMath/formulas"
+	"strings"
+)
 
 const runeDifference = 87
 
 func ToTen(base int, bts string) int64 {
+	bts = strings.ToLower(bts)
 	var baseTen int64 = 0
 	for i := 0; i < len(bts); i++ {
 		char := rune(bts[len(bts)-1-i])
