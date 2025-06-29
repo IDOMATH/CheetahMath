@@ -1,4 +1,4 @@
-package formulas
+package radians
 
 import (
 	"math"

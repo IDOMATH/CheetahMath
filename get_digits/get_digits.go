@@ -1,4 +1,4 @@
-package formulas
+package get_digits
 
 func GetDigits(num int64) int64 {
 	if num < 0 {

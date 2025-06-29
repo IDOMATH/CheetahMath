@@ -1,4 +1,4 @@
-package formulas
+package haversine
 
 import (
 	"testing"

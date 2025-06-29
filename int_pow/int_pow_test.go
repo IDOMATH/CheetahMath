@@ -1,6 +1,8 @@
-package formulas
+package int_pow
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestIntPow(t *testing.T) {
 	var expected int64 = 1

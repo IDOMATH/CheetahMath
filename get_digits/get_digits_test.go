@@ -1,6 +1,8 @@
-package formulas
+package get_digits
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestGetDigits(t *testing.T) {
 	var expected int64 = 1

@@ -1,4 +1,4 @@
-package formulas
+package int_pow
 
 // IntPow does the math.Pow() thing but only accepts integers and return an integer
 // 0 is returned instead of an error.  Treat 0 as an error.
