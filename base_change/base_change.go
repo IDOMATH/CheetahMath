@@ -27,5 +27,6 @@ func ToTen(base int, in string) int64 {
 // able to have strings.Atoi() called directly on it for an integer value.
 // Will return the empty string if an error occurs
 func FromTen(base int, in int64) string {
+
 	return ""
 }
