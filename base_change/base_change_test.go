@@ -2,6 +2,18 @@ package base_change
 
 import "testing"
 
+type input struct {
+	base  int
+	value string
+}
+
+var table = []struct {
+	ins      input
+	expected int64
+}{
+	{input{36, "a"}, 10},
+}
+
 func Test_ToTen_From36(t *testing.T) {
 	var expected int64 = 10
 	got := ToTen(36, "a")
