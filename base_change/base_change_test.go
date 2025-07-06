@@ -55,9 +55,16 @@ var fromTen_ToThirtySixTable = []struct {
 	expected int64
 }{
 	{"0", 0},
+	{"a", 10},
+	{"z", 35},
+	{"10", 36},
+	{"5", 5},
+	{"9", 9},
+	{"2s", 100},
+	{"100", 1296},
 }
 
-func TestTenToThirtySix(t *testing.T) {
+func Test_ToTen_FromThirtySix(t *testing.T) {
 	for _, testCase := range fromTen_ToThirtySixTable {
 		expected := testCase.expected
 		got := ToTen(36, testCase.in)
