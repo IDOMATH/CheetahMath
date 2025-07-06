@@ -49,3 +49,34 @@ func Test_ToTen_From2(t *testing.T) {
 
 	}
 }
+
+var fromTen_ToThirtySixTable = []struct {
+	in       string
+	expected int64
+}{
+	{"0", 0},
+}
+
+func TestTenToThirtySix(t *testing.T) {
+	for _, testCase := range fromTen_ToThirtySixTable {
+		expected := testCase.expected
+		got := ToTen(36, testCase.in)
+		if got != expected {
+			t.Error("expected: ", expected, "but got: ", got)
+		}
+	}
+}
+
+func TestSr(t *testing.T) {
+	expected := "a"
+	got := sr(10)
+	if got != expected {
+		t.Error("Expected : ", expected, " but got: ", got)
+	}
+
+	expected = "z"
+	got = sr(35)
+	if got != expected {
+		t.Error("Expected : ", expected, " but got: ", got)
+	}
+}
